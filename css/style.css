@@ -374,74 +374,15 @@ span {
   letter-spacing: 2px;
   margin-bottom: 0.75rem;
 }
-
-.education {
+.education{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
   background: var(--second-bg-color);
 }
-main.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-}
 
-.col header.title {
-  font-family: "Times New Roman", Times, serif;
-  color: var(--text-color);
-  padding: 0px 0px 20px 30px;
-}
-
-.col .contents {
-  padding: 0px 30px;
-  border-left: 2px solid var(--text-color);
-}
-
-.col .contents .box {
-  position: relative;
-  padding: 20px;
-  border: 1px solid #191919;
-  background-color: var(--bg-color);
-  cursor: pointer;
-  transition: all 0.4s;
-  margin-bottom: 20px;
-}
-
-.col .contents .box:hover {
-  background-color: #7e5757;
-  border: 1px solid transparent;
-  box-shadow: 0px 3px 12px 0px #ccc;
-}
-
-.col .contents .box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  right: calc(120% - 40px);
-  background-color: var(--main-color);
-  border: 2px solid #191919;
-}
-.box h4 {
-  position: relative;
-  color: var(--text-color);
-}
-
-.box h3 {
-  font-size: 19px;
-  padding: 10px 0px 6px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text-color);
-}
-
-.box p {
-  line-height: 1.2;
-  color: var(--text-color);
-  font-size: 17px;
-}
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -507,6 +448,21 @@ main.row {
 .footer-iconTop a i{
   font-size: 2.4rem;
   color: var(--second-bg-color);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .col {
+    flex: 100%;
+  }
 }
 
 /* responsive */
@@ -576,5 +532,58 @@ main.row {
   }
   .skills h2{
     margin-bottom: 3rem;
+  }
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  
+  #menu-icon {
+    display: block;
+  }
+  
+  .header.sticky {
+    padding: 1rem 9%;
+  }
+  
+  .header.sticky .logo {
+    font-size: 2rem;
+  }
+  
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+  
+  .btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.4rem;
+  }
+  
+  .header {
+    padding: 1rem 6%;
+  }
+  
+  .heading {
+    font-size: 1.8rem;
+  }
+  
+  .navbar a {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+  }
+  
+  .home-content h3 {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    font-size: 1.2rem;
   }
 }

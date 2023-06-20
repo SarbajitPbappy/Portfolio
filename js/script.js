@@ -44,16 +44,17 @@ ScrollReveal().reveal('.about-img,.contact-content,.home-content h1', { origin: 
 ScrollReveal().reveal('.home-content p,.about-content', { origin: 'right' });
 
 const text = document.querySelector(".sec-text");
+
 const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = "Web Developer!";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "Web Designer!";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "Software Developer!";
-    }, 8000);
-}
+  setTimeout(() => {
+    text.textContent = "Web Developer!";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Web Designer!";
+  }, 3000);
+  setTimeout(() => {
+    text.textContent = "Software Developer!";
+  }, 8000);
+};
 textLoad();
 setInterval(textLoad, 12000);
